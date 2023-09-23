@@ -1,0 +1,29 @@
+### Create a book.
+POST http://127.0.0.1:8000/library/all_books/
+Content-Type: JSON
+
+{
+  "title": "Created Book",
+  "author": "luchoDev",
+  "publication_year":2020
+}
+
+### Get all books.
+GET http://127.0.0.1:8000/library/all_books/
+
+### Get details from a book by ID.
+GET http://127.0.0.1:8000/library/all_books/1
+
+
+### Update a book with ID.
+PUT http://127.0.0.1:8000/library/all_books/1
+Content-Type: application/json
+
+{
+  "title": "Updated Book",
+  "author": "luchoDev",
+  "publication_year":2020
+}
+
+### Delete a book by ID.
+DELETE http://127.0.0.1:8000/library/all_books/1
