@@ -1,5 +1,7 @@
 FROM python:3.10.13-alpine3.18
 
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /app
 
 RUN apk update \
