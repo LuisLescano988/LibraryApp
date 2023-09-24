@@ -1,6 +1,6 @@
 ### Create a book.
 POST http://127.0.0.1:8000/library/all_books/
-Content-Type: JSON
+Content-Type: application/json
 
 {
   "title": "Created Book",
