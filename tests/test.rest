@@ -27,3 +27,8 @@ Content-Type: application/json
 
 ### Delete a book by ID.
 DELETE http://127.0.0.1:8000/library/all_books/1
+
+### Test if token is authorized.
+GET http://127.0.0.1:8000/users/test_token/
+Content-Type: application/json
+Authorization: Token ###Token Here###
