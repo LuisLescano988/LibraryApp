@@ -5,7 +5,6 @@ from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_2
 from .models import Book
 from .serializers import BookSerializer
 
-# Create your views here.
 class BookView(APIView):
 
     def get(self, request):
