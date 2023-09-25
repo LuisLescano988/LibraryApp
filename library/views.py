@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.filters import SearchFilter
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_200_OK, HTTP_404_NOT_FOUND, HTTP_204_NO_CONTENT
 from .models import Book
 from .serializers import BookSerializer
@@ -10,6 +11,8 @@ class BookView(APIView):
     def get(self, request):
             all_books = Book.objects.all()
             serializers = BookSerializer(all_books, many=True)
+            filter_backends = [SearchFilter]
+            search_fields = ['title']
             return Response(serializers.data)
 
     def post(self, request):
