@@ -9,10 +9,10 @@ Content-Type: application/json
 }
 
 ### Get all books.
-GET http://127.0.0.1:8000/library/all_books/
+GET http://127.0.0.1:8000/library/all_books
 
 ### Get details from a book by ID.
-GET http://127.0.0.1:8000/library/all_books/1
+GET http://127.0.0.1:8000/library/all_books/2
 
 
 ### Update a book with ID.
